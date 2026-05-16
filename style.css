@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+    width: 300px;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.inpBox {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#inputEl {
+    flex: 1;
+    border-radius: 20px;
+    border: none;
+    padding: 12px;
+    outline: none;
+    font-weight: 700;
+    background-color: rgb(232, 228, 224);
+    text-transform: capitalize;
+}
+
+#addBtnEl {
+    background-color: rgb(41, 234, 79);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 60px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+}
+
+ul {
+    padding: 0;
+    margin-top: 35px;
+}
+
+.listEl {
+    background-color: rgb(232, 228, 224);
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.labelEl {
+    text-transform: capitalize;
+}
+
+.markEl,
+.delEl {
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.mark {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
