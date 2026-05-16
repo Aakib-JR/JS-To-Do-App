@@ -3,6 +3,21 @@ let addBtnEl = document.getElementById('addBtnEl');
 let ulEl = document.getElementById('ulEl');
 
 
+// GET LOCAL STORAGE
+
+let savedTodos = localStorage.getItem("todos");
+
+if (savedTodos) {
+    ulEl.innerHTML = savedTodos;
+}
+
+
+// SET LOCAL STORAGE
+
+function saveData() {
+    localStorage.setItem("todos", ulEl.innerHTML);
+}
+
 // BUTTON CLICK ADD TODO
 
 function add() {
@@ -27,10 +42,14 @@ function add() {
         return;
     }
 
-    else {
-        ulEl.insertAdjacentHTML("beforeend", newList);
-        inputEl.value = "";
-    }
+    ulEl.insertAdjacentHTML("beforeend", newList);
+
+    // SAVE
+    saveData();
+
+
+    inputEl.value = "";
+
 }
 
 
@@ -55,6 +74,9 @@ ulEl.addEventListener('click', (e) => {
 
         let label = e.target.closest("li").querySelector(".labelEl");
         label.classList.toggle("mark");
+
+        // SAVE
+        saveData();
     }
 
 
@@ -62,6 +84,9 @@ ulEl.addEventListener('click', (e) => {
 
     if (e.target.classList.contains("delEl")) {
         e.target.closest("li").remove();
+
+        // SAVE
+        saveData();
     }
 
 });
