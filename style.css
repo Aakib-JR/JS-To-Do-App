@@ -4,18 +4,25 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-image: linear-gradient(to left, rgb(239, 32, 32), rgb(51, 78, 255));
 }
 
 .container {
     margin-top: 50px;
-    width: 300px;
-    border: 1px solid black;
+    width: 400px;
     padding: 20px;
     text-align: center;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 h1 {
     margin-bottom: 40px;
+    text-shadow: 1px 1px 2px black;
 }
 
 .inpBox {
@@ -31,8 +38,9 @@ h1 {
     padding: 12px;
     outline: none;
     font-weight: 700;
-    background-color: rgb(232, 228, 224);
+    background-color: rgb(252, 248, 245);
     text-transform: capitalize;
+    box-shadow: inset 1px 1px 5px black;
 }
 
 #addBtnEl {
@@ -44,6 +52,7 @@ h1 {
     font-weight: 900;
     cursor: pointer;
     box-shadow: 1px 1px 5px black;
+    transition: 0.2s ease;
 }
 
 ul {
@@ -52,7 +61,7 @@ ul {
 }
 
 .listEl {
-    background-color: rgb(232, 228, 224);
+    background-color: rgb(252, 248, 245);
     list-style: none;
     padding: 10px;
     display: flex;
@@ -60,10 +69,12 @@ ul {
     align-items: center;
     margin: 10px 0;
     border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
 }
 
 .labelEl {
     text-transform: capitalize;
+    overflow: hidden;
 }
 
 .markEl,
@@ -75,5 +86,14 @@ ul {
 
 .mark {
     text-decoration: line-through;
-    opacity: 0.6;
+    /* opacity: 0.6; */
+    color: red;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.80);
 }
